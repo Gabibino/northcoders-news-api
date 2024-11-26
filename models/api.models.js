@@ -10,4 +10,10 @@ function getAllTopics() {
         });
 }
 
-module.exports = { getAllTopics };
+function getArticleById(article_id) {
+    return db
+        .query('SELECT * FROM articles WHERE article_id = $1', [article_id]) 
+        .then((result) => result.rows[0]); //returns the first article found, or undefined if there is not one
+}
+
+module.exports = { getAllTopics, getArticleById };
