@@ -1,7 +1,18 @@
 # Northcoders News API
 
-For instructions, please head over to [L2C NC News](https://l2c.northcoders.com/courses/be/nc-news).
+## Setting Up Environment Variables
 
+Since the `.env.*` files are ignored by Git, you will need to create two environment variable files locally:
+
+1. Create a `.env.development` file with the following content:
+   
+ PGDATABASE=nc_news_dev
+
+   
+
+2. Create a `.env.test` file with the following content:
+   
+  PGDATABASE=nc_news_test
 
 
 --- 
